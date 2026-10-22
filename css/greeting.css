@@ -1,0 +1,736 @@
+/* ==========================================================================
+   VMDP Greeting Page Stylesheet (会社概要 - ご挨拶)
+   Pixel-perfect implementation matching desktop & mobile references
+   Utilizing REM units, zero unnecessary !important
+   Component-level responsive breakpoints at 1279px, 1024px, 767px
+   Organized with section-level media queries matching top.css architecture
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Subpage Hero Banner (会社概要 COMPANY)
+   -------------------------------------------------------------------------- */
+.page-hero-banner {
+    width: 100%;
+    min-height: 11.25rem;
+    /* 180px - matching desktop reference */
+    background-color: #edf7fc;
+    background-image: url('../images/31.png');
+    background-repeat: no-repeat;
+    background-position: right 2% center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.page-hero-inner {
+    max-width: var(--container-width);
+    width: 100%;
+    margin: 0 auto;
+    padding: 2.75rem 1rem;
+    position: relative;
+    z-index: 2;
+}
+
+.page-hero-title {
+    font-family: 'Noto Serif JP', 'Times New Roman', serif;
+    font-size: 2.25rem;
+    /* 36px */
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 0.1em;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.page-hero-subtitle {
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8125rem;
+    /* 13px */
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    margin-top: 0.375rem;
+}
+
+/* Subpage Hero Component Responsive Breakpoints */
+@media screen and (max-width: 1279px) {
+    .page-hero-inner {
+        padding: 2.5rem 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .page-hero-banner {
+        min-height: 9.5rem;
+    }
+
+    .page-hero-inner {
+        padding: 2rem 1.5rem;
+    }
+
+    .page-hero-title {
+        font-size: 1.875rem;
+        /* 30px */
+    }
+
+    .page-hero-subtitle {
+        font-size: 0.75rem;
+        /* 12px */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-hero-banner {
+        min-height: 6.875rem;
+        /* 110px */
+        background-position: right 15% center;
+    }
+
+    .page-hero-inner {
+        padding: 1.25rem 1rem;
+    }
+
+    .page-hero-title {
+        font-size: 1.5rem;
+        /* 24px */
+        letter-spacing: 0.08em;
+    }
+
+    .page-hero-subtitle {
+        font-size: 0.75rem;
+        /* 12px */
+        letter-spacing: 0.18em;
+        margin-top: 0.25rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Breadcrumb Navigation
+   -------------------------------------------------------------------------- */
+.breadcrumb-nav {
+    max-width: var(--container-width);
+    margin: 1.25rem auto 2.5rem auto;
+    padding: 0 1rem;
+}
+
+.breadcrumb-list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 0.75rem;
+    /* 12px */
+    color: #444444;
+    letter-spacing: 0.02em;
+}
+
+.breadcrumb-list li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.breadcrumb-list a {
+    color: #444444;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb-list a:hover {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    margin: 0 0.375rem;
+    color: #777777;
+    user-select: none;
+}
+
+.breadcrumb-current {
+    color: #222222;
+    font-weight: 500;
+}
+
+/* Breadcrumb Component Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+    .breadcrumb-nav {
+        margin: 1rem auto 2rem auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .breadcrumb-nav {
+        display: none;
+        /* Breadcrumbs hidden on SP matching reference design */
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Subpage Section Heading Common (Flanked by thin accent lines)
+   -------------------------------------------------------------------------- */
+.subpage-section-heading {
+    text-align: center;
+    margin-bottom: 2.25rem;
+    position: relative;
+}
+
+.subpage-heading-ja {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Noto Serif JP', 'Times New Roman', serif;
+    font-size: 1.75rem;
+    /* 28px */
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.12em;
+    line-height: 1.2;
+    max-width: 100%;
+}
+
+.subpage-heading-ja::before,
+.subpage-heading-ja::after {
+    content: "";
+    display: inline-block;
+    width: 3.5rem;
+    /* 56px */
+    height: 1px;
+    background-color: #e5868f;
+    vertical-align: middle;
+}
+
+.subpage-heading-ja::before {
+    margin-right: 1.25rem;
+}
+
+.subpage-heading-ja::after {
+    margin-left: 1.25rem;
+}
+
+.subpage-heading-en {
+    display: block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem;
+    /* 12px */
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-top: 0.375rem;
+}
+
+/* Subpage Section Heading Component Responsive Breakpoints */
+@media screen and (max-width: 1024px) {
+    .subpage-section-heading {
+        margin-bottom: 2rem;
+    }
+
+    .subpage-heading-ja {
+        font-size: 1.5rem;
+        /* 24px */
+    }
+
+    .subpage-heading-ja::before,
+    .subpage-heading-ja::after {
+        width: 2.5rem;
+        margin: 0 0.75rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .subpage-section-heading {
+        margin-top: 2.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .subpage-heading-ja {
+        font-size: 1.25rem;
+        /* 20px */
+        letter-spacing: 0.06em;
+    }
+
+    .subpage-heading-ja::before,
+    .subpage-heading-ja::after {
+        width: 1.5rem;
+        margin: 0 0.5rem;
+    }
+
+    .subpage-heading-en {
+        font-size: 0.6875rem;
+        /* 11px */
+        margin-top: 0.25rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Greeting (ご挨拶) Main Section
+   -------------------------------------------------------------------------- */
+.greeting-section {
+    max-width: var(--container-width);
+    margin: 0 auto 4.5rem auto;
+    padding: 0 1rem;
+    overflow-x: clip;
+}
+
+.greeting-catch-wrap {
+    text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: 2.25rem;
+}
+
+.greeting-catch {
+    font-family: 'Noto Serif JP', 'Times New Roman', serif;
+    font-size: 1.375rem;
+    /* 22px */
+    font-weight: 700;
+    color: #333333;
+    letter-spacing: 0.08em;
+    line-height: 1.65;
+    margin: 0;
+}
+
+.greeting-catch .text-red {
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.greeting-body {
+    max-width: 58rem;
+    /* 928px */
+    margin: 0 auto;
+}
+
+.greeting-body p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.85;
+    color: #2b2b2b;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-bottom: 1.25rem;
+}
+
+.greeting-body p:last-child {
+    margin-bottom: 0;
+}
+
+.greeting-signoff {
+    max-width: 58rem;
+    margin: 2rem auto 0 auto;
+    text-align: right;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.75;
+    color: #2b2b2b;
+    width: 100%;
+}
+
+.greeting-signoff .company-name {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+.greeting-signoff .representative {
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* Greeting Component Responsive Breakpoints */
+@media screen and (max-width: 1279px) {
+    .greeting-section {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .greeting-section {
+        margin-bottom: 3.75rem;
+    }
+
+    .greeting-catch-wrap {
+        margin-top: 2rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .greeting-catch {
+        font-size: 1.25rem;
+        /* 20px */
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .greeting-section {
+        margin-bottom: 2.75rem;
+        padding: 0 1rem;
+    }
+
+    .greeting-catch-wrap {
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .greeting-catch {
+        font-size: 1rem;
+        /* 16px */
+        line-height: 1.7;
+        letter-spacing: 0.04em;
+    }
+
+    .greeting-body p {
+        font-size: 0.8125rem;
+        /* 13px */
+        line-height: 1.85;
+        letter-spacing: 0.02em;
+        margin-bottom: 1.125rem;
+    }
+
+    .greeting-signoff {
+        margin-top: 1.5rem;
+        text-align: right;
+        font-size: 0.8125rem;
+        /* 13px */
+        line-height: 1.75;
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Product Development History Section (製品開発ヒストリー)
+   -------------------------------------------------------------------------- */
+.history-section {
+    max-width: var(--container-width);
+    margin: 0 auto 5rem auto;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+    /* Clips petri dish so it never causes page scroll */
+}
+
+.history-content-wrap {
+    position: relative;
+    max-width: 58rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2.5rem;
+}
+
+/* Petri dish scientific background positioned subtly behind */
+.history-petri-bg {
+    position: absolute;
+    right: -1rem;
+    top: 11rem;
+    width: 27rem;
+    /* 432px */
+    height: auto;
+    opacity: 0.85;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.history-petri-bg img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* History Text: Appears on LEFT on desktop (order: 1) */
+.history-text-col {
+    order: 1;
+    flex: 1 1 56%;
+    min-width: 0;
+    position: relative;
+    z-index: 2;
+}
+
+.history-text-col p {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.875rem;
+    /* 14px */
+    line-height: 1.85;
+    color: #2b2b2b;
+    letter-spacing: 0.03em;
+    text-align: justify;
+    text-justify: inter-ideograph;
+    margin-bottom: 1.25rem;
+}
+
+.history-text-col p:last-child {
+    margin-bottom: 0;
+}
+
+/* Diabuster product: Appears on RIGHT on desktop (order: 2) */
+.history-product-col {
+    order: 2;
+    flex: 0 0 40%;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 0.25rem;
+}
+
+.history-product-col picture {
+    display: block;
+    width: 100%;
+    max-width: 15rem;
+    /* ~320px */
+}
+
+.history-product-col img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+
+
+/* History Tree Diagram */
+.history-tree-wrap {
+    margin: 2rem auto 0 auto;
+    max-width: 56.1875rem;
+    /* 899px - matches 103.png native width */
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.history-tree-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* History Component Responsive Breakpoints */
+@media screen and (max-width: 1279px) {
+    .history-section {
+        padding: 0 1.5rem;
+    }
+
+    .history-petri-bg {
+        right: 0;
+        width: 24rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .history-section {
+        margin-bottom: 4rem;
+    }
+
+    .history-content-wrap {
+        gap: 1.5rem;
+    }
+
+    .history-petri-bg {
+        width: 20rem;
+        right: 0;
+        top: 0;
+        opacity: 0.75;
+    }
+
+    .history-product-col picture {
+        max-width: 16rem;
+    }
+
+    .history-tree-wrap {
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .history-section {
+        margin-bottom: 3rem;
+        padding: 0 1rem;
+    }
+
+    .history-content-wrap {
+        display: block;
+        position: relative;
+    }
+
+    /* Float Diabuster image right next to Paragraph 1 */
+    .history-product-col {
+        float: right;
+        width: 44%;
+        max-width: 10.5rem;
+        /* ~168px */
+        margin: 0.25rem 0 0.75rem 0.875rem;
+        padding-top: 0;
+    }
+
+    .history-product-col picture {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .history-product-col img {
+        width: 100%;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 0.25rem 0.625rem rgba(0, 0, 0, 0.06));
+    }
+
+    .history-petri-bg {
+        right: 0rem;
+        top: 7.5rem;
+        width: 14rem;
+        opacity: 0.6;
+    }
+
+    .history-text-col p {
+        font-size: 0.8125rem;
+        /* 13px */
+        line-height: 1.85;
+        letter-spacing: 0.02em;
+        margin-bottom: 1.125rem;
+    }
+
+    .history-tree-wrap {
+        clear: both;
+        margin-top: 1.5rem;
+        width: 100%;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   シリーズ紹介 (SERIES) Section
+   -------------------------------------------------------------------------- */
+.series-section {
+    max-width: var(--container-width);
+    margin: 4.5rem auto 2.5rem auto;
+    padding: 0 1rem;
+    overflow-x: clip;
+}
+
+.series-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.series-heading .main-title {
+    font-family: 'Noto Serif JP', 'Times New Roman', serif;
+    font-size: 1.875rem;
+    /* 30px */
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+}
+
+.series-heading .sub-title {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.8125rem;
+    /* 13px */
+    font-weight: 700;
+    color: var(--primary-red);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    margin-top: 0.375rem;
+    display: block;
+}
+
+.series-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.125rem;
+    /* 18px */
+}
+
+.series-card-link {
+    display: block;
+    flex: 1;
+    min-width: 0;
+    transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.series-card-link:hover {
+    opacity: 0.88;
+}
+
+.series-card-link picture,
+.series-card-link img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Series Component Responsive Breakpoints */
+@media screen and (max-width: 1279px) {
+    .series-section {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .series-section {
+        margin-top: 3.5rem;
+        margin-bottom: 3rem;
+    }
+
+    .series-heading .main-title {
+        font-size: 1.625rem;
+    }
+
+    .series-heading .sub-title {
+        font-size: 0.75rem;
+    }
+
+    .series-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .series-section {
+        margin-top: 3rem;
+        margin-bottom: 2.5rem;
+        padding: 0 0.875rem;
+    }
+
+    .series-heading {
+        margin-bottom: 1.5rem;
+    }
+
+    .series-heading .main-title {
+        font-size: 1.5rem;
+    }
+
+    .series-heading .sub-title {
+        font-size: 0.75rem;
+    }
+
+    .series-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+}
+
+/* --------------------------------------------------------------------------
+   Utility Classes
+   -------------------------------------------------------------------------- */
+.sp-only {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    .sp-only {
+        display: inline;
+    }
+}

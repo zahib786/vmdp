@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>獣医医療開発株式会社　－VMDP－[home]</title>
+    <meta name="keywords" content="獣医医療開発,獣医,獣医師,求人,募集,採用募集，ディアバスター,ビオイムバスター,ボミットバスター,ウロアクト,ヘパアクト">
+    <meta name="description" content="獣医医療開発株式会社は、動物用医薬品・サプリメントの開発会社です。投薬コンプライアンス向上を目指し、製品開発を行っております。">
+    <meta name="robots" content="ALL">
+
+    <!-- Google Fonts: Noto Sans JP, Noto Serif JP, Alex Brush -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/top.css">
+</head>
+
+<body>
+    <div id="allContents">
+
+        <!-- ==================================================================
+             Site Header
+             ================================================================== -->
+        <header class="site-header" id="header">
+            <div class="header-inner">
+                <!-- Top Utility Bar (Desktop only) -->
+                <div class="header-top-bar">
+                    <p class="header-notice">獣医医療開発は、動物薬の開発に興味がある学生の新卒採用を行っております。エントリー募集中です。</p>
+                    <nav class="header-links" aria-label="Utility Links">
+                        <a href="https://www.vmdp.jp/policy/">個人情報保護方針</a>
+                        <a href="https://www.vmdp.jp/sitemap/">サイトマップ</a>
+                        <a
+                            href="mailto:&#109;&#107;&#45;&#118;&#101;&#116;&#64;&#118;&#109;&#100;&#112;&#46;&#106;&#112;">お問い合わせ</a>
+                    </nav>
+                </div>
+
+                <!-- Middle Branding & Tel / SP Hamburger -->
+                <div class="header-mid-bar">
+                    <div class="header-logo">
+                        <a href="index.html">
+                            <picture>
+                                <source media="(max-width: 767px)" srcset="images/2.webp" type="image/webp">
+                                <source media="(max-width: 767px)" srcset="images/2.png" type="image/png">
+                                <source srcset="images/19.png" type="image/png">
+                                <img src="images/19.png" alt="獣医医療開発株式会社" width="272" height="52">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <!-- Contact Details (Desktop) -->
+                    <div class="header-contact">
+                        <div class="contact-item">
+                            <img src="images/2 .png" alt="TEL" width="12" height="17">
+                            <span class="contact-label">TEL</span>
+                            <span class="contact-number">03-3886-1011</span>
+                        </div>
+                        <div class="contact-item">
+                            <img src="images/layer-13.png" alt="FAX" width="13" height="12">
+                            <span class="contact-label">FAX</span>
+                            <span class="contact-number">03-6806-3100</span>
+                        </div>
+                    </div>
+
+                    <!-- Hamburger Button (Mobile <=767px) -->
+                    <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="メニューを開く"
+                        aria-expanded="false" aria-controls="mobileDrawer">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </button>
+                </div>
+
+                <!-- Main Global Navigation (Desktop) -->
+                <nav class="header-nav" aria-label="Main Navigation">
+                    <ul>
+                        <li class="menuCorp"><a href="corp/index.html">会社概要</a></li>
+                        <li class="menuProducts"><a href="http://vmdp.jp/products">製品情報</a></li>
+                        <li class="menudDevelopment"><a href="https://www.vmdp.jp/development">研究開発</a></li>
+                        <li class="menuProtection"><a href="https://www.vmdp.jp/protection">野生動物保全</a></li>
+                        <li class="menudContributions"><a href="https://www.vmdp.jp/contributions">社会貢献</a></li>
+                        <li class="menuRecruit"><a href="https://www.vmdp.jp/recruit">採用情報</a></li>
+                        <li class="menuTop active"><a href="index.html">ホーム</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Mobile Full-screen Drawer Menu (Matching SP PSD メニューOPEN) -->
+        <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+            <div class="drawer-header">
+                <button type="button" class="drawer-close-btn" id="drawerCloseBtn" aria-label="メニューを閉じる">
+                    <span class="close-icon">&times;</span>
+                </button>
+            </div>
+            <nav class="drawer-nav" aria-label="Mobile Navigation">
+                <ul class="drawer-menu-list">
+                    <li class="drawer-item active">
+                        <a href="#">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">ホーム</span>
+                                <span class="drawer-title-en">HOME</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="corp/index.html">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">会社概要</span>
+                                <span class="drawer-title-en">COMPANY</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="http://vmdp.jp/products/">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">製品情報</span>
+                                <span class="drawer-title-en">PRODUCTS</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="https://www.vmdp.jp/development/">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">研究開発</span>
+                                <span class="drawer-title-en">development</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="https://www.vmdp.jp/protection/">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">野生動物保全</span>
+                                <span class="drawer-title-en">protection</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item">
+                        <a href="https://www.vmdp.jp/contributions/">
+                            <div class="drawer-item-text">
+                                <span class="drawer-title-ja">社会貢献</span>
+                                <span class="drawer-title-en">contributions</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                    <li class="drawer-item drawer-item-recruit">
+                        <a href="https://www.vmdp.jp/recruit/">
+                            <div class="drawer-item-text">
+                                <span class="drawer-badge">新卒採用</span>
+                                <span class="drawer-title-ja">採用情報</span>
+                            </div>
+                            <span class="drawer-arrow">&gt;</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="drawer-sublinks">
+                    <a href="https://www.vmdp.jp/policy/">個人情報保護方針</a>
+                    <span class="sublinks-sep">|</span>
+                    <a href="https://www.vmdp.jp/sitemap/">サイトマップ</a>
+                    <span class="sublinks-sep">|</span>
+                    <a href="mailto:mk-vet@vmdp.jp">お問い合わせ</a>
+                </div>
+            </nav>
+        </div>
+        <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+        <!-- ==================================================================
+             Main Content Area
+             ================================================================== -->
+        <main id="main">
+
+            <!-- Hero / Main Visual Section -->
+            <section class="hero-section" id="hero">
+                <div class="hero-text-block" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <h1 class="hero-catchcopy">動物医療の<br>未来を、創る。</h1>
+                    <p class="hero-subcopy">獣医療の現場に寄り添う、<br>動物用医薬品・サプリメントの研究開発。</p>
+                </div>
+
+                <!-- Mobile Separated Hero Visual Layer (Matching SP reference) -->
+                <div class="hero-sp-visual" aria-hidden="true">
+                    <picture>
+                        <source srcset="images/mbl23.webp" type="image/webp">
+                        <img src="images/mbl23.png" alt="" width="388" height="239">
+                    </picture>
+                </div>
+
+                <!-- Floating Product 3D Card Slider -->
+                <div class="hero-slider-wrap" id="heroSliderWrap">
+                    <button type="button" class="slider-arrow slider-arrow-prev" id="sliderPrevBtn" aria-label="前へ">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/9.png">
+                            <img src="images/arrow_prev.png" alt="前へ" width="70" height="83">
+                        </picture>
+                    </button>
+
+                    <div class="hero-slider-stage" id="heroSliderStage">
+                        <!-- Slide 1: セフォベクリア注 -->
+                        <a href="https://www.vmdp.jp/products/cefoveclear/cefoveclear.html"
+                            class="hero-slider-card card-center is-active" aria-label="セフォベクリア注">
+                            <picture>
+                                <source srcset="slider/028_hd.webp" type="image/webp">
+                                <img src="slider/028_hd.png" alt="セフォベクリア注" class="slider-card-inner-img" width="1170"
+                                    height="558" fetchpriority="high">
+                            </picture>
+                        </a>
+                        <!-- Slide 2: ディアバスター錠 -->
+                        <a href="https://www.vmdp.jp/products/diabuster/diabuster.html"
+                            class="hero-slider-card card-next" aria-label="ディアバスター錠">
+                            <picture>
+                                <source srcset="slider/001_hd.webp" type="image/webp">
+                                <img src="slider/001_hd.png" alt="ディアバスター錠" class="slider-card-inner-img" width="1254"
+                                    height="600">
+                            </picture>
+                        </a>
+                        <!-- Slide 3: ビオイムバスター錠 -->
+                        <a href="https://www.vmdp.jp/products/bioymbuster/bioymbuster.html"
+                            class="hero-slider-card card-hidden-right" aria-label="ビオイムバスター錠">
+                            <picture>
+                                <source srcset="slider/002_hd.webp" type="image/webp">
+                                <img src="slider/002_hd.png" alt="ビオイムバスター錠" class="slider-card-inner-img" width="1254"
+                                    height="600">
+                            </picture>
+                        </a>
+                        <!-- Slide 4: ボミットバスター錠 -->
+                        <a href="https://www.vmdp.jp/products/vomitbuster/vomitbuster.html"
+                            class="hero-slider-card card-hidden-right" aria-label="ボミットバスター錠">
+                            <picture>
+                                <source srcset="slider/003_hd.webp" type="image/webp">
+                                <img src="slider/003_hd.png" alt="ボミットバスター錠" class="slider-card-inner-img" width="1254"
+                                    height="600">
+                            </picture>
+                        </a>
+                        <!-- Slide 5: アモキシクリア錠 -->
+                        <a href="https://www.vmdp.jp/products/amoxiclear/amoxiclear.html"
+                            class="hero-slider-card card-hidden-left" aria-label="アモキシクリア錠">
+                            <picture>
+                                <source srcset="slider/004_hd.webp" type="image/webp">
+                                <img src="slider/004_hd.png" alt="アモキシクリア錠" class="slider-card-inner-img" width="1254"
+                                    height="600">
+                            </picture>
+                        </a>
+                        <!-- Slide 6: セファクリア錠 -->
+                        <a href="https://www.vmdp.jp/products/cefaclear/cefaclear.html"
+                            class="hero-slider-card card-prev" aria-label="セファクリア錠">
+                            <picture>
+                                <source srcset="slider/005_hd.webp" type="image/webp">
+                                <img src="slider/005_hd.png" alt="セファクリア錠" class="slider-card-inner-img" width="1254"
+                                    height="600">
+                            </picture>
+                        </a>
+                    </div>
+
+                    <button type="button" class="slider-arrow slider-arrow-next" id="sliderNextBtn" aria-label="次へ">
+                        <picture>
+                            <source media="(max-width: 767px)" srcset="images/8.png">
+                            <img src="images/22.png" alt="次へ" width="84" height="97">
+                        </picture>
+                    </button>
+                </div>
+
+                <!-- Hero Bottom Wave Transition (Clean curve path) -->
+                <div class="hero-wave-container" aria-hidden="true">
+                    <svg class="hero-wave-svg" viewBox="0 0 1440 60" preserveAspectRatio="none">
+                        <path fill="#ffffff" d="M0,20 C380,55 960,-10 1440,25 L1440,60 L0,60 Z"></path>
+                    </svg>
+                </div>
+            </section>
+
+            <!-- 1DAY Open Company Recruit Banner -->
+            <section class="top-recruit-section" aria-label="1DAY オープンカンパニー">
+                <a href="https://www.vmdp.jp/recruit" class="recruit-banner-link" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/12.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/12.png" type="image/png">
+                        <source srcset="images/43.webp" type="image/webp">
+                        <img src="images/43.png" alt="新卒採用 1DAY オープンカンパニー 短時間・WEB開催 大阪と東京2会場 獣医師の就業 詳細・エントリーはこちらから"
+                            width="1131" height="459" loading="lazy">
+                    </picture>
+                </a>
+            </section>
+
+            <!-- 事業紹介 (SERVICE) Section -->
+            <section class="service-section" id="service">
+                <div class="service-container">
+                    <div class="section-heading light">
+                        <h2 class="main-title">事業紹介</h2>
+                        <span class="sub-title">SERVICE</span>
+                    </div>
+
+                    <!-- Service 01: 開発事業部 -->
+                    <article class="service-item service-item-01">
+                        <div class="service-photo" data-aos="fade-right" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                            <picture>
+                                <source srcset="images/service_01.webp" type="image/webp">
+                                <img src="images/service_01.jpg" alt="開発事業部" width="289" height="197" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-num-row">
+                                <span class="service-script">Service</span>
+                                <span class="service-num">01</span>
+                            </div>
+                            <h3 class="service-division">開発事業部</h3>
+                            <div class="service-line line-01"></div>
+                            <ul class="service-bullets">
+                                <li>● 動物用医薬品／サプリメント／飼料の研究開発</li>
+                                <li>● 承認申請・特許取得</li>
+                                <li>● 受託製造・生産効率改良</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Service 02: 製薬事業部 (PC right-aligned) -->
+                    <article class="service-item service-item-02">
+                        <div class="service-photo" data-aos="fade-left" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                            <picture>
+                                <source srcset="images/service_02.webp" type="image/webp">
+                                <img src="images/service_02.jpg" alt="製薬事業部" width="286" height="194" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-num-row">
+                                <span class="service-script">Service</span>
+                                <span class="service-num">02</span>
+                            </div>
+                            <h3 class="service-division">製薬事業部</h3>
+                            <div class="service-line line-02"></div>
+                            <ul class="service-bullets">
+                                <li>● 獣医科大学との共同研究</li>
+                                <li>● 嗜好性や臨床効果の分析</li>
+                                <li>● 市場調査やマーケティング</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <!-- Service 03: 臨床事業部 -->
+                    <article class="service-item service-item-03">
+                        <div class="service-photo" data-aos="fade-right" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
+                            <picture>
+                                <source srcset="images/service_03.webp" type="image/webp">
+                                <img src="images/service_03.jpg" alt="臨床事業部" width="289" height="196" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="service-info">
+                            <div class="service-num-row">
+                                <span class="service-script">Service</span>
+                                <span class="service-num">03</span>
+                            </div>
+                            <div class="service-division-row">
+                                <h3 class="service-division">臨床事業部</h3>
+                                <a href="https://www.vmdp.jp/" target="_blank" rel="noopener noreferrer"
+                                    class="btn-blue-pill">
+                                    <span>ホームページはこちら</span>
+                                    <svg class="btn-chevron" viewBox="0 0 10 14" fill="none" stroke="currentColor"
+                                        stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                                        aria-hidden="true">
+                                        <polyline points="2.5,2.5 7.2,7 2.5,11.5" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="service-line line-03"></div>
+                            <ul class="service-bullets">
+                                <li>● 動物用医薬品・サプリメントの試験</li>
+                                <li>● 最新医療・専門医療との共同臨床</li>
+                                <li>● 奄美大島での動物病院運営、離島医療への取り組み</li>
+                                <li>● 野生動物保全・TNR活動</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- グループ会社紹介 (GROUP COMPANY) Section -->
+            <section class="group-company-section" id="group-company">
+                <div class="group-company-heading">
+                    <h2 class="main-title">グループ会社紹介</h2>
+                    <span class="sub-title">Group COMPANY</span>
+                </div>
+                <div class="group-company-content">
+                    <div class="group-building-photo" data-aos="fade-right" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/107.webp" type="image/webp">
+                            <img src="images/107.png" alt="リケンベッツファーマ株式会社 社屋" width="308" height="155" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="group-company-info">
+                        <h3 class="group-company-name">リケンベッツファーマ株式会社</h3>
+                        <p class="group-company-desc">動物用医薬品、動物用医療用具、料添加物の製造販売、研究開発を行っています。</p>
+                        <div class="group-company-btn-green">
+                            <a href="https://www.vmdp.jp/" target="_blank" rel="noopener noreferrer"
+                                class="btn-green-pill">
+                                <span>ホームページはこちら</span>
+                                <svg class="btn-chevron" viewBox="0 0 10 14" fill="none" stroke="currentColor"
+                                    stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"
+                                    aria-hidden="true">
+                                    <polyline points="2.5,2.5 7.2,7 2.5,11.5" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 当社の取り組み (OUR INITIATIVES) Section -->
+            <section class="initiatives-section" id="initiatives">
+                <div class="section-heading">
+                    <h2 class="main-title">当社の取り組み</h2>
+                    <span class="sub-title">Our Initiatives</span>
+                </div>
+
+                <div class="initiatives-grid">
+                    <!-- Left Column: ケナガネズミ -->
+                    <div class="initiative-col">
+                        <div class="initiative-header-row">
+                            <div class="round-image-wrap" data-aos="fade-right" data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+                                <picture>
+                                    <source srcset="images/106.png" type="image/webp">
+                                    <img src="images/106.png" alt="ケナガネズミ" width="149" height="144" loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="initiative-text-side">
+                                <p class="initiative-sub">獣医療開発（株）「シクロロキャップ®」</p>
+                                <p class="initiative-bold-copy">当社では売り上げの一部を<br>ケナガネズミ保護支援金として<br>寄付しています。</p>
+                                <div class="initiative-gray-box">
+                                    当社では「シクロロキャップ®」の売り上げの一部を絶滅危惧種のケナガネズミ保護支援金として寄付しています。<br>今後も、野生動物の保護活動に積極的に取り組んで参ります。
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Right Column: ペット防災 -->
+                    <div class="initiative-col">
+                        <div class="initiative-header-row">
+                            <div class="bousai-image-wrap" data-aos="fade-left" data-aos-offset="300"
+                                data-aos-easing="ease-in-sine">
+                                <picture>
+                                    <source srcset="images/pet_bousai.webp" type="image/webp">
+                                    <img src="images/pet_bousai.png" alt="ペットと防災" width="152" height="222"
+                                        loading="lazy">
+                                </picture>
+                            </div>
+                            <div class="initiative-text-side">
+                                <p class="initiative-bold-copy">獣医療開発株式会社は<br>ペット防災の取り組みを支援しています。</p>
+                                <div class="initiative-gray-box">
+                                    ペット防災は災害時にペットと飼い主様の安全を守る大切な取り組みです。<br>当社では売上の一部をペット防災活動を行っている団体様へ寄付しています。
+                                    <a href="https://petbousai.jp/support-company" target="_blank"
+                                        rel="noopener noreferrer" class="link-orange">寄付先：NPO法人ペット防災ネットワーク他</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- 飼い主様向け動画 & 日本を盛り上げる Section -->
+            <section class="media-section" id="media">
+                <!-- Left Banner: 日本を盛り上げる！ -->
+                <div class="media-banner-col" data-aos="fade-right" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine">
+                    <picture>
+                        <source media="(max-width: 767px)" srcset="images/56.webp" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="images/56.png" type="image/png">
+                        <source srcset="images/94.webp" type="image/webp">
+                        <img src="images/94.png" alt="日本を盛り上げる！ 私たちVMDPグループは、日本全国の獣医療従事者の皆様を応援しています。" width="643"
+                            height="332" loading="lazy">
+                    </picture>
+                </div>
+
+                <!-- Right Video: 飼い主様向け動画 -->
+                <div class="media-video-col">
+                    <div class="section-heading">
+                        <h2 class="main-title">飼い主様向け動画</h2>
+                        <span class="sub-title">MOVIE</span>
+                    </div>
+                    <div class="video-player-wrap" data-aos="fade-left" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <video controls poster="images/top_movie/movie_thum.png" controlsList="nodownload"
+                            preload="none" aria-label="飼い主様向け動画">
+                            <source src="images/top_movie/owner.webm" type="video/mp4">
+                            <p>※ご利用のブラウザでは動画を再生することができません。</p>
+                        </video>
+                    </div>
+                    <p class="movie-caption">※動画提供：株式会社メディアート（<a href="https://www.medi-art.co.jp/" target="_blank"
+                            rel="noopener noreferrer">https://www.medi-art.co.jp/</a>）</p>
+                </div>
+            </section>
+
+            <!-- 新製品情報 (NEW) Section -->
+            <section class="new-products-section" id="new-products">
+                <div class="section-heading">
+                    <h2 class="main-title">新製品情報</h2>
+                    <span class="sub-title">NEW</span>
+                </div>
+
+                <div class="products-grid">
+                    <a href="https://www.vmdp.jp/products/cefoveclear/" class="product-card-link" data-aos="fade-right"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/new_prod_1.webp" type="image/webp">
+                            <img src="images/new_prod_1.png" alt="セフォベクリア注" width="269" height="280" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/products/maropitat/" class="product-card-link" data-aos="fade-right"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/new_prod_2.webp" type="image/webp">
+                            <img src="images/new_prod_2.png" alt="マロピタット注" width="269" height="280" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/products/maropitat_tab/" class="product-card-link" data-aos="fade-left"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/new_prod_3.webp" type="image/webp">
+                            <img src="images/new_prod_3.png" alt="マロピタット錠" width="269" height="280" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/products/isoflurane/" class="product-card-link" data-aos="fade-left"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/new_prod_4.webp" type="image/webp">
+                            <img src="images/new_prod_4.png" alt="リケンイソフラン" width="270" height="280" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+            </section>
+
+            <!-- シリーズ紹介 (SERIES) Section -->
+            <section class="series-section" id="series">
+                <div class="section-heading">
+                    <h2 class="main-title">シリーズ紹介</h2>
+                    <span class="sub-title">SERIES</span>
+                </div>
+
+                <div class="series-grid">
+                    <a href="https://www.vmdp.jp/series_buster/" class="series-card-link" data-aos="fade-right"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/series_1.webp" type="image/webp">
+                            <img src="images/series_1.png" alt="バスター錠シリーズ" width="269" height="143" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/series_act/" class="series-card-link" data-aos="fade-right"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/series_2.webp" type="image/webp">
+                            <img src="images/series_2.png" alt="ACTシリーズ" width="269" height="143" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/series_clear/" class="series-card-link" data-aos="fade-left"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/series_3.webp" type="image/webp">
+                            <img src="images/series_3.png" alt="クリア錠シリーズ" width="269" height="143" loading="lazy">
+                        </picture>
+                    </a>
+                    <a href="https://www.vmdp.jp/series_heart/" class="series-card-link" data-aos="fade-left"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine">
+                        <picture>
+                            <source srcset="images/series_4.webp" type="image/webp">
+                            <img src="images/series_4.png" alt="ハート錠シリーズ" width="270" height="143" loading="lazy">
+                        </picture>
+                    </a>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- ==================================================================
+             Site Footer
+             ================================================================== -->
+        <div class="site-footer-wrap">
+            <!-- Back to top button (Desktop) -->
+            <div class="footer-pagetop-bar">
+                <a href="#allContents" class="pagetop-link" aria-label="ページTOPへ戻る">
+                    <img src="images/bt_totop.gif" alt="ページTOPへ戻る" width="125" height="26">
+                </a>
+            </div>
+
+            <!-- Footer main -->
+            <footer class="site-footer" id="footer">
+                <div class="footer-inner">
+                    <!-- Desktop Footer Row -->
+                    <div class="footer-main-row">
+                        <div class="footer-brand">
+                            <a href="index.html">
+                                <picture>
+                                    <source srcset="images/footer_logo.webp" type="image/webp">
+                                    <img src="images/footer_logo.png" alt="獣医医療開発株式会社" width="363" height="41"
+                                        loading="lazy">
+                                </picture>
+                            </a>
+                        </div>
+                        <nav class="footer-nav" aria-label="Footer Navigation">
+                            <ul>
+                                <li class="menuTop"><a href="index.html">ホーム</a></li>
+                                <li class="menuCorp"><a href="https://www.vmdp.jp/corp/">会社概要</a></li>
+                                <li class="menuProducts"><a href="http://vmdp.jp/products/">製品情報</a></li>
+                                <li class="menudDevelopment"><a href="https://www.vmdp.jp/development/">研究開発</a></li>
+                                <li class="menuProtection"><a href="https://www.vmdp.jp/protection/">野生動物保全</a></li>
+                                <li class="menudContributions"><a href="https://www.vmdp.jp/contributions/">社会貢献</a>
+                                </li>
+                                <li class="menuRecruit"><a href="https://www.vmdp.jp/recruit/">採用情報</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <!-- SP Mobile Footer Content (Matching SP PSD) -->
+                    <div class="footer-sp-content">
+                        <div class="footer-sp-logo">
+                            <a href="index.html">
+                                <picture>
+                                    <source srcset="images/footer_logo_sp.webp" type="image/webp">
+                                    <img src="images/footer_logo_sp.png" alt="獣医医療開発株式会社" width="376" height="50"
+                                        loading="lazy">
+                                </picture>
+                            </a>
+                        </div>
+                        <nav class="footer-sp-nav" aria-label="Mobile Footer Navigation">
+                            <ul class="sp-nav-col">
+                                <li><a href="index.html"><span class="sp-dot">●</span>ホーム</a></li>
+                                <li><a href="https://www.vmdp.jp/corp/"><span class="sp-dot">●</span>会社概要</a></li>
+                                <li><a href="http://vmdp.jp/products/"><span class="sp-dot">●</span>製品情報</a></li>
+                                <li><a href="https://www.vmdp.jp/development/"><span class="sp-dot">●</span>研究開発</a>
+                                </li>
+                            </ul>
+                            <ul class="sp-nav-col">
+                                <li><a href="https://www.vmdp.jp/protection/"><span class="sp-dot">●</span>野生動物保全</a>
+                                </li>
+                                <li><a href="https://www.vmdp.jp/contributions/"><span class="sp-dot">●</span>社会貢献</a>
+                                </li>
+                                <li><a href="https://www.vmdp.jp/recruit/"><span class="sp-dot">●</span>採用情報</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <p class="footer-copyright">Copyright &copy; 2008 - 2026 VMDP Co.ltd All Rights Reserved.</p>
+                </div>
+            </footer>
+        </div>
+
+        <!-- Floating Back to Top Button for Mobile (Matching SP PSD 楕円形 1) -->
+        <a href="#allContents" class="sp-floating-totop" id="spTotop" aria-label="ページTOPへ戻る">
+            <picture>
+                <source srcset="images/sp_totop.webp" type="image/webp">
+                <img src="images/sp_totop.png" alt="TOP" width="56" height="56">
+            </picture>
+        </a>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

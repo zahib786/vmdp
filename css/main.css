@@ -1,0 +1,831 @@
+/* ==========================================================================
+   VMDP Main Stylesheet
+   Modern semantic CSS, rem units, zero unnecessary !important
+   Responsive component breakpoints at 1279px, 1024px, 767px
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS Variables & Tokens
+   -------------------------------------------------------------------------- */
+:root {
+    --primary-red: #e60012;
+    --primary-red-hover: #c4000f;
+    --dark-wine: #70222a;
+    --wine-line: #b32d36;
+    --wine-border: #d45d65;
+    --wine-footer-bar: #8c1e28;
+    --text-dark: #333333;
+    --text-body: #4e4e4e;
+    --text-muted: #666666;
+    --text-light: #888888;
+    --bg-light: #f7f7f7;
+    --border-color: #e5e5e5;
+    --container-width: 70.6875rem;
+    /* 1131px */
+    --content-max-width: 80rem;
+    /* 1280px */
+}
+
+/* --------------------------------------------------------------------------
+   Reset & Base Elements
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: var(--text-dark);
+    background-color: #ffffff;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+a {
+    color: var(--primary-red);
+    text-decoration: none;
+    transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+a:hover {
+    color: var(--primary-red-hover);
+    text-decoration: underline;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+    max-width: 100%;
+    height: auto;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+#allContents {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* ==========================================================================
+   Site Header
+   ========================================================================== */
+.site-header {
+    width: 100%;
+    background-color: #ffffff;
+    border-top: 0.1875rem solid var(--primary-red);
+    /* 3px red top bar */
+    border-bottom: 0.3125rem solid var(--primary-red);
+    /* 5px red bottom bar */
+    position: relative;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0.75rem 2.875rem 0 2.875rem;
+    /* 46px horizontal padding */
+    position: relative;
+}
+
+/* Top utility bar (Desktop) */
+.header-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.625rem;
+    /* 10px */
+    padding-bottom: 0.875rem;
+    /* 14px */
+}
+
+.header-notice {
+    color: var(--text-dark);
+    font-size: 0.625rem;
+    letter-spacing: 0.02em;
+    font-family: 'Meiryo', 'Noto Sans JP', sans-serif;
+}
+
+.header-links {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.header-links a {
+    color: var(--primary-red);
+    font-size: 0.625rem;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+}
+
+.header-links a::before {
+    content: "→";
+    margin-right: 0.25rem;
+    font-size: 0.625rem;
+}
+
+.header-links a:hover {
+    text-decoration: underline;
+}
+
+/* Middle Branding & Contact Bar */
+.header-mid-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.75rem;
+    /* 12px */
+}
+
+.header-logo a {
+    display: block;
+}
+
+.header-logo img {
+    width: 17rem;
+    /* 272px */
+    height: 3.25rem;
+    /* 52px */
+    display: block;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    /* 24px */
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    /* 6px */
+}
+
+.contact-item img {
+    height: 1.0625rem;
+    /* 17px */
+    width: auto;
+}
+
+.contact-label {
+    font-size: 0.6875rem;
+    /* 11px */
+    font-weight: 700;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.contact-number {
+    font-size: 1.125rem;
+    /* 18px */
+    font-weight: 700;
+    font-style: italic;
+    color: var(--text-dark);
+    letter-spacing: 0.05em;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Main Navigation Menu */
+.header-nav {
+    position: relative;
+    width: 100%;
+}
+
+.header-nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.25rem 0.625rem 0.25rem;
+}
+
+.header-nav li {
+    position: relative;
+}
+
+.header-nav li a {
+    display: block;
+    font-size: 0.875rem;
+    /* 14px */
+    font-weight: 500;
+    color: var(--text-dark);
+    text-decoration: none;
+    padding: 0.375rem 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.header-nav li a:hover {
+    color: var(--primary-red);
+    text-decoration: none;
+}
+
+/* Active indicator */
+.header-nav li.active a {
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.header-nav li.active::after {
+    content: "▲";
+    position: absolute;
+    bottom: -0.625rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--primary-red);
+    font-size: 0.625rem;
+    line-height: 1;
+}
+
+/* Hamburger button (default hidden on desktop) */
+.hamburger-btn {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 2.75rem;
+    height: 2.75rem;
+    padding: 0.5rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    z-index: 1001;
+}
+
+.hamburger-btn .bar {
+    display: block;
+    width: 1.875rem;
+    /* 30px */
+    height: 0.25rem;
+    /* 4px */
+    background-color: var(--primary-red);
+    border-radius: 0.125rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Mobile Drawer Menu (Matching SP PSD メニューOPEN) */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 85%;
+    max-width: 25rem;
+    /* 400px */
+    height: 100vh;
+    background-color: #ffffff;
+    border-left: 0.25rem solid var(--primary-red);
+    box-shadow: -0.5rem 0 2rem rgba(0, 0, 0, 0.2);
+    z-index: 1002;
+    transition: right 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.mobile-drawer.open {
+    right: 0;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.drawer-header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.drawer-close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    line-height: 1;
+    color: var(--primary-red);
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+.drawer-nav {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.drawer-menu-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-item {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.drawer-item a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.875rem 1.5rem;
+    text-decoration: none;
+    color: var(--text-dark);
+    transition: background-color 0.2s ease;
+}
+
+.drawer-item a:hover {
+    background-color: #fafafa;
+    text-decoration: none;
+}
+
+.drawer-item.active a {
+    background-color: #fff8f8;
+}
+
+.drawer-item.active .drawer-title-ja {
+    color: var(--primary-red);
+    font-weight: 700;
+}
+
+.drawer-item-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.drawer-title-ja {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.drawer-title-en {
+    font-size: 0.6875rem;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    margin-top: 0.125rem;
+    text-transform: uppercase;
+}
+
+.drawer-badge {
+    font-size: 0.625rem;
+    color: var(--primary-red);
+    font-weight: 700;
+    margin-bottom: 0.125rem;
+}
+
+.drawer-arrow {
+    color: var(--primary-red);
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.drawer-sublinks {
+    margin-top: auto;
+    padding: 1.5rem 1.25rem 2rem 1.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.6875rem;
+    border-top: 1px solid #eeeeee;
+    flex-wrap: wrap;
+}
+
+.drawer-sublinks a {
+    color: var(--text-muted);
+    text-decoration: none;
+}
+
+.drawer-sublinks a:hover {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.sublinks-sep {
+    color: #cccccc;
+}
+
+.drawer-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.drawer-backdrop.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Header Component Responsive Breakpoints (1279px, 1024px, 767px) */
+@media screen and (max-width: 1279px) {
+    .header-inner {
+        padding: 0.75rem 1.5rem 0 1.5rem;
+    }
+
+    .header-nav ul {
+        padding: 0 0.5rem 0.625rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-top-bar {
+        font-size: 0.5625rem;
+    }
+
+    .header-logo img {
+        width: 14rem;
+        height: auto;
+    }
+
+    .contact-number {
+        font-size: 1rem;
+    }
+
+    .header-nav li a {
+        font-size: 0.8125rem;
+        padding: 0.375rem 0.25rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-header {
+        border-top: 0.1875rem solid var(--primary-red);
+        border-bottom: none;
+    }
+
+    .header-inner {
+        padding: 0.5rem 1rem;
+    }
+
+    .header-top-bar {
+        display: none;
+        /* Hidden on mobile */
+    }
+
+    .header-contact {
+        display: none;
+        /* Contacts in drawer/mobile header hidden */
+    }
+
+    .header-nav {
+        display: none;
+        /* Replaced by hamburger drawer on mobile */
+    }
+
+    .header-mid-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding-bottom: 0;
+    }
+
+    .header-logo {
+        max-width: calc(100% - 3.5rem);
+    }
+
+    .header-logo img {
+        width: 100%;
+        max-width: 13.5rem;
+        /* ~216px */
+        height: auto;
+    }
+
+    .hamburger-btn {
+        display: flex;
+        flex-shrink: 0;
+    }
+}
+
+@media (min-width:768px) and (max-width:800px) {
+    .header-notice {
+        max-width: 45%;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Site Footer
+   ========================================================================== */
+.site-footer-wrap {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    margin-top: 0;
+}
+
+/* Back to Top button (Desktop) */
+.footer-pagetop-bar {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 0;
+    padding-right: 4.6875rem;
+    /* 75px offset matching reference pagetop position */
+}
+
+.pagetop-link {
+    display: inline-block;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.pagetop-desktop {
+    display: inline-block;
+}
+
+.pagetop-mobile {
+    display: none;
+}
+
+.pagetop-link:hover {
+    opacity: 0.85;
+}
+
+.pagetop-link img {
+    width: 7.8125rem;
+    /* 125px */
+    height: 1.625rem;
+    /* 26px */
+    display: block;
+}
+
+/* Footer Main */
+.site-footer {
+    width: 100%;
+    background-color: var(--bg-light);
+    border-top: 0.25rem solid var(--primary-red);
+    /* 4px primary-red accent bar matching reference */
+    padding: 1.75rem 0 1.5rem 0;
+}
+
+.footer-inner {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.footer-main-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1.25rem;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-brand a {
+    display: block;
+}
+
+.footer-brand img {
+    width: 22.6875rem;
+    /* 363px */
+    height: 2.5625rem;
+    /* 41px */
+    display: block;
+    object-fit: contain;
+}
+
+.footer-nav ul {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 0.75rem;
+}
+
+.footer-nav li {
+    font-size: 0.625rem;
+    /* 10px */
+    color: var(--text-light);
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-nav li::before {
+    content: "・";
+    color: var(--primary-red);
+    /* Red dot bullet matching reference */
+    margin-right: 0.125rem;
+    font-weight: 700;
+}
+
+.footer-nav li a {
+    color: #555555;
+    font-size: 0.625rem;
+    /* 10px */
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-nav li a:hover {
+    color: var(--primary-red);
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: center;
+    font-size: 0.625rem;
+    /* 10px */
+    color: var(--text-light);
+    letter-spacing: 0.05em;
+    padding-top: 0.75rem;
+    border-top: 1px solid #eaeaea;
+}
+
+/* SP Mobile Footer Content (default hidden on desktop) */
+.footer-sp-content {
+    display: none;
+}
+
+.sp-dot {
+    color: var(--primary-red);
+    margin-right: 0.375rem;
+    font-size: 0.625rem;
+}
+
+/* SP Floating Back to Top Button */
+.sp-floating-totop {
+    display: none;
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1rem;
+    width: 3.5rem;
+    /* 56px */
+    height: 3.5rem;
+    /* 56px */
+    border-radius: 50%;
+    z-index: 99;
+    box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.25);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sp-floating-totop img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.sp-floating-totop:hover {
+    transform: scale(1.05);
+}
+
+/* Footer Component Responsive Breakpoints (1279px, 1024px, 767px) */
+@media screen and (max-width: 1279px) {
+    .footer-inner {
+        padding: 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer-brand img {
+        width: 18rem;
+        height: auto;
+    }
+
+    .footer-nav ul {
+        gap: 0.25rem 0.5rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .site-footer-wrap {
+        margin-top: 1rem;
+    }
+
+    .footer-pagetop-bar {
+        display: flex;
+        justify-content: flex-end;
+        padding-right: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .pagetop-desktop {
+        display: none;
+    }
+
+    .pagetop-mobile {
+        display: block;
+        width: 2.625rem;
+        /* 42px */
+        height: 2.625rem;
+    }
+
+    .pagetop-mobile img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .sp-floating-totop {
+        display: none;
+    }
+
+    .site-footer {
+        background-color: #ffffff;
+        padding: 1.25rem 0 1rem 0;
+    }
+
+    .footer-main-row {
+        display: none;
+        /* Replaced by SP mobile footer layout */
+    }
+
+    .footer-sp-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 1.5rem;
+    }
+
+    .footer-sp-logo {
+        margin-bottom: 1.25rem;
+        text-align: center;
+        width: 100%;
+        max-width: 23.5rem;
+    }
+
+    .footer-sp-logo img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .footer-sp-nav {
+        display: flex;
+        justify-content: space-around;
+        gap: 2.5rem;
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+
+    .sp-nav-col {
+        display: flex;
+        flex-direction: column;
+        gap: 0.625rem;
+    }
+
+    .sp-nav-col li a {
+        color: #333333;
+        font-size: 0.8125rem;
+        /* ~13px matching SP PSD */
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
+
+    .sp-nav-col li a:hover {
+        color: var(--primary-red);
+        text-decoration: underline;
+    }
+
+    .footer-copyright {
+        font-size: 0.625rem;
+        padding-top: 1rem;
+        border-top: none;
+    }
+}
